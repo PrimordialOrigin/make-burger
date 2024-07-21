@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bun{
+    height: 90px;
+    width: 300px;
+    background-color: rgb(229, 152, 88);
+    border-radius: 50% 50% 5% 5%;
+}
+
+.bottom-bun{
+    height: 40px;
+    width: 300px;
+    background-color: rgb(229, 152, 88);
+    border-radius: 0 0 10% 10%;
+    margin-top: 5px;
+}
+
+.tomato{
+    height: 25px;
+    width: 300px;
+    margin-top: 5px;
+}
+
+.meat{
+    height: 40px;
+    width: 300px;
+    margin-top: 3px;
+}
+
+.lettuce{
+    height: 30px;
+    width: 300px;
+    margin-top: 3px;
+}
+
+p{
+    margin: 5px;
+    color: white;
+}
+
+button{
+    margin: 10px;
+}

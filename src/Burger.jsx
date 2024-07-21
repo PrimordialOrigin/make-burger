@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ingredients as allIngredients } from './Ingredients'; 
+import './burger.css';
 
 function Burger() {
   const [burgerIngredients, setBurgerIngredients] = useState([]);
@@ -10,7 +11,7 @@ function Burger() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <div className='top-bun'></div>
       {burgerIngredients.map((ingredient, index) => (
         <div 
