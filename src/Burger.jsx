@@ -13,7 +13,10 @@ function Burger() {
     <div>
       <div className='top-bun'></div>
       {burgerIngredients.map((ingredient, index) => (
-        <div key={index} className='ingredient' style={{ backgroundColor: ingredient.color }}>
+        <div 
+          key={index} 
+          className={`ingredient ${ingredient.fillings.toLowerCase()}`} 
+          style={{ backgroundColor: ingredient.color }}>
           <p>{ingredient.fillings}</p>
         </div>
       ))}
