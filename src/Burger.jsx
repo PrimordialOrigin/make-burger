@@ -7,9 +7,13 @@ function Burger() {
 
   const addIngredient = (id) => {
     const ingredient = allIngredients.find(item => item.id === id);
-    setBurgerIngredients([...burgerIngredients, ingredient]);
+    setBurgerIngredients([...burgerIngredients, {...ingredient, key: Date.now()}]);
   };
 
+  const removeIngredient = (key) => {
+    setBurgerIngredients(burgerIngredients.filter(ingredient => ingredient.key !==key));
+  };
+  
   return (
     <div className='container'>
       <div className='top-bun'></div>
@@ -17,6 +21,7 @@ function Burger() {
         <div 
           key={index} 
           className={`ingredient ${ingredient.fillings.toLowerCase()}`} 
+          onClick={() => removeIngredient(ingredient.key)}
           style={{ backgroundColor: ingredient.color }}>
           <p>{ingredient.fillings}</p>
         </div>
